@@ -1,0 +1,94 @@
+:root {
+    --main-color: #231330;
+    --secondary-color: #463d58;
+    --third-color: #120a1896;
+    --blue-color: #4fa5c9;
+}
+body {
+    margin: 0;
+    background-color: var(--main-color);
+    color: white;
+    font-family: monospace;
+    font-size: 17px;
+}
+.Container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.Body-img img {
+    height: 750px;
+    opacity: 25%;
+    /* animation: animation1 2s ease 3s infinite normal none; */
+}
+/* @keyframes animation1 {
+    0% {
+      animation-timing-function: ease-out;transform: scale(1);transform-origin: center center;
+    }
+    10% {
+      animation-timing-function: ease-in;transform: scale(0.91);
+    }
+    17% {
+      animation-timing-function: ease-out;transform: scale(0.98);
+    }
+    33% {
+      animation-timing-function: ease-in;transform: scale(0.87);
+    }
+    45% {
+      animation-timing-function: ease-out;transform: scale(1);
+    }
+    
+  } */
+.middle-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.middle-section .Details {
+    width: 700px;
+    height: 220px;
+    background-color: var(--third-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+.middle-section .Details p {
+    padding: 0 20px;
+    font-size: 50px;
+}
+#myChart {
+    height: 500px;
+    width: 700px;
+    background-color: var(--third-color);
+    display: flex;
+}
+.Container .right-section {
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+}
+.Brain-img {
+    height: 100%;
+    margin: 30px;
+}
+.Brain-img img {
+    height: 200px;
+    border-radius: 40px;
+}
+.Instructions {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--third-color);
+    border-radius: 30px;
+}
+.Instructions p {
+    padding: 15px;
+}
