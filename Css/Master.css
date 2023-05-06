@@ -4,6 +4,7 @@
     --third-color: #120a1896;
     --blue-color: #4fa5c9;
 }
+
 body {
     margin: 0;
     background-color: var(--main-color);
@@ -11,16 +12,24 @@ body {
     font-family: monospace;
     font-size: 17px;
 }
+
 .Container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
+
+.Left-section {
+    display: flex;
+    justify-content: space-around;
+}
+
 .Body-img img {
     height: 750px;
     opacity: 25%;
     /* animation: animation1 2s ease 3s infinite normal none; */
 }
+
 /* @keyframes animation1 {
     0% {
       animation-timing-function: ease-out;transform: scale(1);transform-origin: center center;
@@ -45,6 +54,7 @@ body {
     align-items: center;
     justify-content: space-around;
 }
+
 .middle-section .Details {
     width: 700px;
     height: 220px;
@@ -55,16 +65,19 @@ body {
     justify-content: center;
     font-size: 30px;
 }
+
 .middle-section .Details p {
     padding: 0 20px;
     font-size: 50px;
 }
+
 #myChart {
     height: 500px;
     width: 700px;
     background-color: var(--third-color);
     display: flex;
 }
+
 .Container .right-section {
     height: fit-content;
     display: flex;
@@ -72,14 +85,17 @@ body {
     align-items: center;
     margin: 0 15px;
 }
+
 .Brain-img {
     height: 100%;
     margin: 30px;
 }
+
 .Brain-img img {
     height: 200px;
     border-radius: 40px;
 }
+
 .Instructions {
     height: 100%;
     width: 500px;
@@ -89,6 +105,219 @@ body {
     background-color: var(--third-color);
     border-radius: 30px;
 }
+
 .Instructions p {
     padding: 15px;
+}
+
+/* Media */
+/*---    Very Small     ---*/
+@media (max-width: 546px) {
+    /* .Container {
+        color: rgb(53, 220, 20);
+    } */
+
+    .Container .right-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Brain-img img {
+        height: 165px;
+    }
+
+    .Container .Left-section {
+        flex-wrap: wrap;
+        margin: 30px;
+    }
+
+    .middle-section .Chart #myChart {
+        width: 350px !important;
+    }
+
+    .middle-section .Details {
+        width: 350px;
+        height: 77px;
+        margin: 15px;
+    }
+
+    .middle-section .Details p {
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 547px) and (max-width: 701.80px) {
+    /* .Container {
+        color:gold;
+    } */
+
+    .Container .right-section {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .Brain-img img {
+        height: 165px;
+    }
+
+    .Container .Left-section {
+        flex-wrap: wrap;
+        margin: 30px;
+    }
+
+    .middle-section .Chart #myChart {
+        width: 500px !important;
+        height: 300px !important;
+    }
+
+    .middle-section .Details {
+        width: 500px;
+        height: 77px;
+        margin: 15px;
+    }
+
+    .middle-section .Details p {
+        font-size: 25px;
+    }
+}
+@media (min-width: 702px) and (max-width: 739px) {
+    /* .Container {
+        color: crimson;
+    } */
+
+    .middle-section .Chart {
+        width: 400px;
+    }
+
+    .middle-section .Chart #myChart {
+        height: 300px !important;
+    }
+
+    .middle-section .Details {
+        width: 400px;
+        height: 100px;
+        font-size: 30px;
+    }
+
+    .Brain-img img {
+        height: 160px;
+    }
+
+    .Instructions h1 {
+        font-size: 15px;
+    }
+
+    .Instructions p {
+        font-size: 9px;
+    }
+
+    .Body-img img {
+        height: 500px;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 879.7px) {
+    /* .Container {
+        color: cornflowerblue;
+    } */
+
+    .middle-section .Chart {
+        width: 500px;
+    }
+
+    .middle-section .Details {
+        width: 500px;
+    }
+
+    .Brain-img img {
+        height: 200px;
+    }
+
+    .Instructions {
+        font-size: 13px;
+    }
+
+    .Body-img img {
+        height: 550px;
+    }
+}
+
+/*---    Small     ---*/
+@media (min-width: 880px){
+    /* .Container {
+        color: orange;
+    } */
+
+    #myChart {
+        width: 600px !important;
+        height: 300px !important;
+    }
+
+    .middle-section .Details {
+        width: 600px ;
+    }
+
+    .Brain-img img {
+        height: 250px;
+    }
+
+    .Instructions {
+        font-size: 14px;
+    }
+
+    .Body-img img {
+        height: 600px;
+    }
+}
+
+@media (min-width: 960px) {
+    /* .Container {
+        color: blue;
+    } */
+
+    #myChart {
+        width: 650px !important;
+    }
+
+    .middle-section .Details {
+        width: 650px !important;
+    }
+
+    .Brain-img img {
+        height: 250px;
+    }
+
+    .Instructions {
+        font-size: 15px;
+    }
+}
+
+/*---    Medium    ---*/
+@media (min-width: 1031px) {
+    /* .Container {
+        color: red;
+    } */
+
+    .Brain-img img {
+        height: 270px;
+    }
+
+    .Instructions p {
+        font-size: 15px;
+    }
+
+    .Body-img img {
+        height: 650px;
+    }
+}
+
+/* ---    Large     --- */
+@media (max-width: 1285px) {
+    .Container {
+        flex-direction: column-reverse;
+    }
+
+    .Container .right-section {
+        flex-direction: row-reverse;
+    }
 }

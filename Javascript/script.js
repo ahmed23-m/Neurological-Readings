@@ -20,8 +20,9 @@ const app = initializeApp(firebaseConfig);
 var Signals;
 var details = document.querySelector(".Details p");
 
-import { getDatabase, get, ref, child, onValue } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
+import { getDatabase, ref, child, onValue } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-database.js";
 const database = getDatabase();
+
 onValue(child(ref(database), "Signals"), (snapshot) => {
     Signals = snapshot.val();
     // console.log(Signals);
@@ -29,6 +30,7 @@ onValue(child(ref(database), "Signals"), (snapshot) => {
 onValue(child(ref(database), "The Ratio"), (snapshot) => {
     details.textContent = snapshot.val();
 });
+
 const ctx = document.getElementById('myChart');
 
 var myChart = new Chart(ctx, {
@@ -64,24 +66,9 @@ var myChart = new Chart(ctx, {
     }
 });
 window.setInterval(mycallback, 1000);
-// var counter =0;
 var i =0;
-// var ok = true;
 function mycallback() {
-    // var Time = new Date();
-    // Time = Time.getSeconds();
-    // var t =Number(Time);
-    // var sec = 60;
-    // if(t===0&&ok===true)
-    // {
-    //     counter++;
-    //     ok = false;
-    // }
-    // ok = true;
-    console.log(i);
     i++;
-    // console.log(t+(sec*counter));
-    // myChart.data.labels.push((t+(sec*counter)));
     myChart.data.labels.push(i);
     myChart.data.datasets[0].data.push(Signals);
     if(myChart.data.labels.length>20)
