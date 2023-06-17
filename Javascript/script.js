@@ -33,7 +33,7 @@ onValue(child(ref(database), "The Ratio"), (snapshot) => {
 
 const ctx = document.getElementById('myChart');
 
-var myChart = new myChart(ctx, {
+var myChart = new Chart(ctx, {
     type: 'line',
     data: {
         labels: [0],
