@@ -33,7 +33,7 @@ onValue(child(ref(database), "The Ratio"), (snapshot) => {
 
 const ctx = document.getElementById('myChart');
 
-var myChart = new Chart(ctx, {
+let ch = new Chart(ctx, {
     type: 'line',
     data: {
         labels: [0],
@@ -42,7 +42,13 @@ var myChart = new Chart(ctx, {
                 label: 'Signals speed(HZ)',
                 data: [0],
                 borderWidth: 1,
-                pointRadius: 0
+                pointRadius: 0,
+                borderColor: '#2196f3',
+                pointBorderColor: "#2196f3",
+                pointHoverBackgroundColor: "#2196f3",
+                pointHoverBorderColor: "#2196f3",
+                fill: false,
+                lineTension: 0
             }
         ]
     },
@@ -65,16 +71,17 @@ var myChart = new Chart(ctx, {
         }
     }
 });
+
 window.setInterval(mycallback, 1000);
 var i =0;
 function mycallback() {
     i++;
-    myChart.data.labels.push(i);
-    myChart.data.datasets[0].data.push(Signals);
-    if(myChart.data.labels.length>20)
+    ch.data.labels.push(i);
+    ch.data.datasets[0].data.push(Signals);
+    if(ch.data.labels.length>20)
     {
-        myChart.data.labels.splice(0,4);
-        myChart.data.datasets[0].data.splice(0,4);
+        ch.data.labels.splice(0,4);
+        ch.data.datasets[0].data.splice(0,4);
     }
-    myChart.update();
+    ch.update();
 }
