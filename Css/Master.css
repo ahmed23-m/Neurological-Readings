@@ -110,6 +110,7 @@ body {
     padding: 15px;
 }
 
+
 /* Media */
 /*---    Very Small     ---*/
 @media (max-width: 546px) {
@@ -146,6 +147,7 @@ body {
     }
 }
 
+/*---    Small     ---*/
 @media (min-width: 547px) and (max-width: 701.80px) {
     /* .Container {
         color:gold;
@@ -180,6 +182,8 @@ body {
         font-size: 25px;
     }
 }
+
+/*---    Medium     ---*/
 @media (min-width: 702px) and (max-width: 739px) {
     /* .Container {
         color: crimson;
@@ -242,11 +246,15 @@ body {
     }
 }
 
-/*---    Small     ---*/
+/*---    Default     ---*/
 @media (min-width: 880px){
     /* .Container {
         color: orange;
     } */
+
+    .Container .right-section {
+        margin: 0;
+    }
 
     #myChart {
         width: 600px !important;
@@ -258,66 +266,15 @@ body {
     }
 
     .Brain-img img {
-        height: 250px;
+        height: 200px;
     }
 
     .Instructions {
-        font-size: 14px;
+        width: 400px;
+        font-size: 15px;
     }
 
     .Body-img img {
         height: 600px;
-    }
-}
-
-@media (min-width: 960px) {
-    /* .Container {
-        color: blue;
-    } */
-
-    #myChart {
-        width: 650px !important;
-    }
-
-    .middle-section .Details {
-        width: 650px !important;
-    }
-
-    .Brain-img img {
-        height: 250px;
-    }
-
-    .Instructions {
-        font-size: 15px;
-    }
-}
-
-/*---    Medium    ---*/
-@media (min-width: 1031px) {
-    /* .Container {
-        color: red;
-    } */
-
-    .Brain-img img {
-        height: 270px;
-    }
-
-    .Instructions p {
-        font-size: 15px;
-    }
-
-    .Body-img img {
-        height: 650px;
-    }
-}
-
-/* ---    Large     --- */
-@media (max-width: 1285px) {
-    .Container {
-        flex-direction: column-reverse;
-    }
-
-    .Container .right-section {
-        flex-direction: row-reverse;
     }
 }

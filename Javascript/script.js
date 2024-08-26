@@ -11,8 +11,8 @@ const firebaseConfig = {
     projectId: "noro-14113",
     storageBucket: "noro-14113.appspot.com",
     messagingSenderId: "761578432013",
-    appId: "1:761578432013:web:175bc5a9ef337580a75744",
-    measurementId: "G-WPM8CBFMJJ"
+    appId: "1:761578432013:web:5ce969a3ac6ba666a75744",
+    measurementId: "G-BK20ZQ5NZG"
 };
 
 // Initialize Firebase
